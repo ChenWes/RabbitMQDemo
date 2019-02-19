@@ -83,12 +83,42 @@ namespace RabbitMQServer
             {
                 if (DirectExchangePublishMessageToServerAndWaitConfirm(txt_DirectExchange.Text.Trim(), txt_DirectRouting.Text.Trim(), txt_DirectQueue.Text.Trim(), txt_DirectMessageString.Text.Trim()))
                 {
-                    ShowLog("发送消息成功", LogType.info);
+                    ShowLog("发送Direct消息成功", LogType.info);
                 }
             }
             catch (Exception ex)
             {
-                ShowLog("发送消息错误，原因是：" + ex.Message, LogType.error);
+                ShowLog("发送Direct消息错误，原因是：" + ex.Message, LogType.error);
+            }
+        }
+
+        private void btn_SendFanoutMessage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (FanoutExchangePublishMessageToServerAndWaitConfirm(txt_FanoutExchange.Text.Trim(), txt_FanoutRouting.Text.Trim(), txt_FanoutQueue.Text.Trim(), txt_FanoutMessageString.Text.Trim()))
+                {
+                    ShowLog("发送Fanout消息成功", LogType.info);
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowLog("发送Fanout消息错误，原因是：" + ex.Message, LogType.error);
+            }
+        }
+
+        private void btn_SendTopicMessage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TopicExchangePublishMessageToServerAndWaitConfirm(txt_TopicExchange.Text.Trim(), txt_TopicRouting.Text.Trim(), txt_TopicQueue.Text.Trim(), txt_TopicMessageString.Text.Trim()))
+                {
+                    ShowLog("发送Topic消息成功", LogType.info);
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowLog("发送Topic消息错误，原因是：" + ex.Message, LogType.error);
             }
         }
 
@@ -166,9 +196,9 @@ namespace RabbitMQServer
                 //声明交换机
                 MC_channel.ExchangeDeclare(ExchangeName, ExchangeType.Fanout);
                 //声明队列
-                MC_channel.QueueDeclare(QueueName, queueDurable, false, false, null);
+                //MC_channel.QueueDeclare(QueueName, queueDurable, false, false, null);
                 //路由绑定队列
-                MC_channel.QueueBind(QueueName, ExchangeName, RoutingKey, null);
+                //MC_channel.QueueBind(QueueName, ExchangeName, RoutingKey, null);
 
                 //设置消息持久性
                 IBasicProperties props = MC_channel.CreateBasicProperties();
@@ -250,5 +280,6 @@ namespace RabbitMQServer
                 MC_connection.Close();
             }
         }
+
     }
 }

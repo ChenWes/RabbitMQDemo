@@ -40,27 +40,29 @@
             this.txt_RabbitMQHostName = new System.Windows.Forms.TextBox();
             this.txt_LogText = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txt_TopicQueueName = new System.Windows.Forms.TextBox();
+            this.btn_ReceviedTopic = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txt_FanoutExchange = new System.Windows.Forms.TextBox();
+            this.txt_FanoutQueueName = new System.Windows.Forms.TextBox();
+            this.btn_ReceviedFanout = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_DirectQueueName = new System.Windows.Forms.TextBox();
+            this.btn_ReceivedDirect = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_ReceivedDirect = new System.Windows.Forms.Button();
-            this.btn_ReceviedFanout = new System.Windows.Forms.Button();
-            this.btn_ReceviedTopic = new System.Windows.Forms.Button();
-            this.txt_DirectQueueName = new System.Windows.Forms.TextBox();
-            this.txt_FanoutQueueName = new System.Windows.Forms.TextBox();
-            this.txt_TopicQueueName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -185,6 +187,129 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(394, 530);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.txt_TopicQueueName);
+            this.panel5.Controls.Add(this.btn_ReceviedTopic);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 355);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(388, 172);
+            this.panel5.TabIndex = 2;
+            // 
+            // txt_TopicQueueName
+            // 
+            this.txt_TopicQueueName.Location = new System.Drawing.Point(124, 71);
+            this.txt_TopicQueueName.Name = "txt_TopicQueueName";
+            this.txt_TopicQueueName.Size = new System.Drawing.Size(152, 21);
+            this.txt_TopicQueueName.TabIndex = 1;
+            // 
+            // btn_ReceviedTopic
+            // 
+            this.btn_ReceviedTopic.Location = new System.Drawing.Point(282, 71);
+            this.btn_ReceviedTopic.Name = "btn_ReceviedTopic";
+            this.btn_ReceviedTopic.Size = new System.Drawing.Size(75, 23);
+            this.btn_ReceviedTopic.TabIndex = 0;
+            this.btn_ReceviedTopic.Text = "监听";
+            this.btn_ReceviedTopic.UseVisualStyleBackColor = true;
+            this.btn_ReceviedTopic.Click += new System.EventHandler(this.btn_ReceviedTopic_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 76);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 12);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "TopicQueueName";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.txt_FanoutExchange);
+            this.panel4.Controls.Add(this.txt_FanoutQueueName);
+            this.panel4.Controls.Add(this.btn_ReceviedFanout);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 179);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(388, 170);
+            this.panel4.TabIndex = 1;
+            // 
+            // txt_FanoutExchange
+            // 
+            this.txt_FanoutExchange.Location = new System.Drawing.Point(124, 60);
+            this.txt_FanoutExchange.Name = "txt_FanoutExchange";
+            this.txt_FanoutExchange.Size = new System.Drawing.Size(152, 21);
+            this.txt_FanoutExchange.TabIndex = 1;
+            this.txt_FanoutExchange.Text = "user";
+            // 
+            // txt_FanoutQueueName
+            // 
+            this.txt_FanoutQueueName.Location = new System.Drawing.Point(124, 87);
+            this.txt_FanoutQueueName.Name = "txt_FanoutQueueName";
+            this.txt_FanoutQueueName.Size = new System.Drawing.Size(152, 21);
+            this.txt_FanoutQueueName.TabIndex = 1;
+            this.txt_FanoutQueueName.Text = "user";
+            // 
+            // btn_ReceviedFanout
+            // 
+            this.btn_ReceviedFanout.Location = new System.Drawing.Point(282, 87);
+            this.btn_ReceviedFanout.Name = "btn_ReceviedFanout";
+            this.btn_ReceviedFanout.Size = new System.Drawing.Size(75, 23);
+            this.btn_ReceviedFanout.TabIndex = 0;
+            this.btn_ReceviedFanout.Text = "监听";
+            this.btn_ReceviedFanout.UseVisualStyleBackColor = true;
+            this.btn_ReceviedFanout.Click += new System.EventHandler(this.btn_ReceviedFanout_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 12);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "FanoutQueueName";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.txt_DirectQueueName);
+            this.panel3.Controls.Add(this.btn_ReceivedDirect);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(388, 170);
+            this.panel3.TabIndex = 0;
+            // 
+            // txt_DirectQueueName
+            // 
+            this.txt_DirectQueueName.Location = new System.Drawing.Point(124, 78);
+            this.txt_DirectQueueName.Name = "txt_DirectQueueName";
+            this.txt_DirectQueueName.Size = new System.Drawing.Size(152, 21);
+            this.txt_DirectQueueName.TabIndex = 1;
+            this.txt_DirectQueueName.Text = "MES.MachineStatusLog.Queue";
+            // 
+            // btn_ReceivedDirect
+            // 
+            this.btn_ReceivedDirect.Location = new System.Drawing.Point(282, 76);
+            this.btn_ReceivedDirect.Name = "btn_ReceivedDirect";
+            this.btn_ReceivedDirect.Size = new System.Drawing.Size(75, 23);
+            this.btn_ReceivedDirect.TabIndex = 0;
+            this.btn_ReceivedDirect.Text = "监听";
+            this.btn_ReceivedDirect.UseVisualStyleBackColor = true;
+            this.btn_ReceivedDirect.Click += new System.EventHandler(this.btn_ReceivedDirect_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 81);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 12);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "DirectQueueName";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
@@ -210,116 +335,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 536);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // panel3
+            // label8
             // 
-            this.panel3.Controls.Add(this.txt_DirectQueueName);
-            this.panel3.Controls.Add(this.btn_ReceivedDirect);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(388, 170);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.txt_FanoutQueueName);
-            this.panel4.Controls.Add(this.btn_ReceviedFanout);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 179);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(388, 170);
-            this.panel4.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.txt_TopicQueueName);
-            this.panel5.Controls.Add(this.btn_ReceviedTopic);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 355);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(388, 172);
-            this.panel5.TabIndex = 2;
-            // 
-            // btn_ReceivedDirect
-            // 
-            this.btn_ReceivedDirect.Location = new System.Drawing.Point(282, 76);
-            this.btn_ReceivedDirect.Name = "btn_ReceivedDirect";
-            this.btn_ReceivedDirect.Size = new System.Drawing.Size(75, 23);
-            this.btn_ReceivedDirect.TabIndex = 0;
-            this.btn_ReceivedDirect.Text = "监听";
-            this.btn_ReceivedDirect.UseVisualStyleBackColor = true;
-            this.btn_ReceivedDirect.Click += new System.EventHandler(this.btn_ReceivedDirect_Click);
-            // 
-            // btn_ReceviedFanout
-            // 
-            this.btn_ReceviedFanout.Location = new System.Drawing.Point(282, 87);
-            this.btn_ReceviedFanout.Name = "btn_ReceviedFanout";
-            this.btn_ReceviedFanout.Size = new System.Drawing.Size(75, 23);
-            this.btn_ReceviedFanout.TabIndex = 0;
-            this.btn_ReceviedFanout.Text = "监听";
-            this.btn_ReceviedFanout.UseVisualStyleBackColor = true;
-            this.btn_ReceviedFanout.Click += new System.EventHandler(this.btn_ReceviedFanout_Click);
-            // 
-            // btn_ReceviedTopic
-            // 
-            this.btn_ReceviedTopic.Location = new System.Drawing.Point(282, 71);
-            this.btn_ReceviedTopic.Name = "btn_ReceviedTopic";
-            this.btn_ReceviedTopic.Size = new System.Drawing.Size(75, 23);
-            this.btn_ReceviedTopic.TabIndex = 0;
-            this.btn_ReceviedTopic.Text = "监听";
-            this.btn_ReceviedTopic.UseVisualStyleBackColor = true;
-            this.btn_ReceviedTopic.Click += new System.EventHandler(this.btn_ReceviedTopic_Click);
-            // 
-            // txt_DirectQueueName
-            // 
-            this.txt_DirectQueueName.Location = new System.Drawing.Point(124, 78);
-            this.txt_DirectQueueName.Name = "txt_DirectQueueName";
-            this.txt_DirectQueueName.Size = new System.Drawing.Size(152, 21);
-            this.txt_DirectQueueName.TabIndex = 1;
-            // 
-            // txt_FanoutQueueName
-            // 
-            this.txt_FanoutQueueName.Location = new System.Drawing.Point(124, 87);
-            this.txt_FanoutQueueName.Name = "txt_FanoutQueueName";
-            this.txt_FanoutQueueName.Size = new System.Drawing.Size(152, 21);
-            this.txt_FanoutQueueName.TabIndex = 1;
-            // 
-            // txt_TopicQueueName
-            // 
-            this.txt_TopicQueueName.Location = new System.Drawing.Point(124, 71);
-            this.txt_TopicQueueName.Name = "txt_TopicQueueName";
-            this.txt_TopicQueueName.Size = new System.Drawing.Size(152, 21);
-            this.txt_TopicQueueName.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(65, 81);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 12);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "QueueName";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(65, 92);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 12);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "QueueName";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(65, 76);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 12);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "QueueName";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 63);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 12);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "FanoutExchangeName";
             // 
             // Form1
             // 
@@ -334,14 +357,14 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -374,6 +397,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_DirectQueueName;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_FanoutExchange;
+        private System.Windows.Forms.Label label8;
     }
 }
 

@@ -43,7 +43,25 @@
             this.txt_LogText = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_TopicQueue = new System.Windows.Forms.TextBox();
+            this.txt_TopicExchange = new System.Windows.Forms.TextBox();
+            this.txt_TopicRouting = new System.Windows.Forms.TextBox();
+            this.txt_TopicMessageString = new System.Windows.Forms.TextBox();
+            this.btn_SendTopicMessage = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_FanoutQueue = new System.Windows.Forms.TextBox();
+            this.txt_FanoutExchange = new System.Windows.Forms.TextBox();
+            this.txt_FanoutRouting = new System.Windows.Forms.TextBox();
+            this.txt_FanoutMessageString = new System.Windows.Forms.TextBox();
+            this.btn_SendFanoutMessage = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,6 +76,8 @@
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -210,19 +230,191 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Controls.Add(this.label15);
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Controls.Add(this.txt_TopicQueue);
+            this.panel5.Controls.Add(this.txt_TopicExchange);
+            this.panel5.Controls.Add(this.txt_TopicRouting);
+            this.panel5.Controls.Add(this.txt_TopicMessageString);
+            this.panel5.Controls.Add(this.btn_SendTopicMessage);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 355);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(388, 172);
             this.panel5.TabIndex = 2;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 103);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(35, 12);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Queue";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(8, 18);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(53, 12);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Exchange";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(8, 58);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(47, 12);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "Routing";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(8, 140);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(47, 12);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "Message";
+            // 
+            // txt_TopicQueue
+            // 
+            this.txt_TopicQueue.Location = new System.Drawing.Point(61, 100);
+            this.txt_TopicQueue.Name = "txt_TopicQueue";
+            this.txt_TopicQueue.Size = new System.Drawing.Size(241, 21);
+            this.txt_TopicQueue.TabIndex = 14;
+            this.txt_TopicQueue.Text = "MES.MachineStatusLog.Queue";
+            // 
+            // txt_TopicExchange
+            // 
+            this.txt_TopicExchange.Location = new System.Drawing.Point(61, 15);
+            this.txt_TopicExchange.Name = "txt_TopicExchange";
+            this.txt_TopicExchange.Size = new System.Drawing.Size(241, 21);
+            this.txt_TopicExchange.TabIndex = 15;
+            this.txt_TopicExchange.Text = "MES.MachineStatusLog.Exchange";
+            // 
+            // txt_TopicRouting
+            // 
+            this.txt_TopicRouting.Location = new System.Drawing.Point(61, 55);
+            this.txt_TopicRouting.Name = "txt_TopicRouting";
+            this.txt_TopicRouting.Size = new System.Drawing.Size(241, 21);
+            this.txt_TopicRouting.TabIndex = 16;
+            this.txt_TopicRouting.Text = "MES.MachineStatusLog.Routing";
+            // 
+            // txt_TopicMessageString
+            // 
+            this.txt_TopicMessageString.Location = new System.Drawing.Point(61, 137);
+            this.txt_TopicMessageString.Name = "txt_TopicMessageString";
+            this.txt_TopicMessageString.Size = new System.Drawing.Size(241, 21);
+            this.txt_TopicMessageString.TabIndex = 17;
+            this.txt_TopicMessageString.Text = "Topic路由队列消息";
+            // 
+            // btn_SendTopicMessage
+            // 
+            this.btn_SendTopicMessage.Location = new System.Drawing.Point(306, 135);
+            this.btn_SendTopicMessage.Name = "btn_SendTopicMessage";
+            this.btn_SendTopicMessage.Size = new System.Drawing.Size(75, 23);
+            this.btn_SendTopicMessage.TabIndex = 13;
+            this.btn_SendTopicMessage.Text = "发送消息";
+            this.btn_SendTopicMessage.UseVisualStyleBackColor = true;
+            this.btn_SendTopicMessage.Click += new System.EventHandler(this.btn_SendTopicMessage_Click);
+            // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.txt_FanoutQueue);
+            this.panel4.Controls.Add(this.txt_FanoutExchange);
+            this.panel4.Controls.Add(this.txt_FanoutRouting);
+            this.panel4.Controls.Add(this.txt_FanoutMessageString);
+            this.panel4.Controls.Add(this.btn_SendFanoutMessage);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 179);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(388, 170);
             this.panel4.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 102);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 12);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Queue";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(8, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 12);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Exchange";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 57);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 12);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Routing";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 139);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 12);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Message";
+            // 
+            // txt_FanoutQueue
+            // 
+            this.txt_FanoutQueue.Location = new System.Drawing.Point(61, 99);
+            this.txt_FanoutQueue.Name = "txt_FanoutQueue";
+            this.txt_FanoutQueue.Size = new System.Drawing.Size(241, 21);
+            this.txt_FanoutQueue.TabIndex = 14;
+            // 
+            // txt_FanoutExchange
+            // 
+            this.txt_FanoutExchange.Location = new System.Drawing.Point(61, 14);
+            this.txt_FanoutExchange.Name = "txt_FanoutExchange";
+            this.txt_FanoutExchange.Size = new System.Drawing.Size(241, 21);
+            this.txt_FanoutExchange.TabIndex = 15;
+            this.txt_FanoutExchange.Text = "user";
+            // 
+            // txt_FanoutRouting
+            // 
+            this.txt_FanoutRouting.Location = new System.Drawing.Point(61, 54);
+            this.txt_FanoutRouting.Name = "txt_FanoutRouting";
+            this.txt_FanoutRouting.Size = new System.Drawing.Size(241, 21);
+            this.txt_FanoutRouting.TabIndex = 16;
+            // 
+            // txt_FanoutMessageString
+            // 
+            this.txt_FanoutMessageString.Location = new System.Drawing.Point(61, 136);
+            this.txt_FanoutMessageString.Name = "txt_FanoutMessageString";
+            this.txt_FanoutMessageString.Size = new System.Drawing.Size(241, 21);
+            this.txt_FanoutMessageString.TabIndex = 17;
+            this.txt_FanoutMessageString.Text = "Fanout路由队列消息";
+            // 
+            // btn_SendFanoutMessage
+            // 
+            this.btn_SendFanoutMessage.Location = new System.Drawing.Point(306, 134);
+            this.btn_SendFanoutMessage.Name = "btn_SendFanoutMessage";
+            this.btn_SendFanoutMessage.Size = new System.Drawing.Size(75, 23);
+            this.btn_SendFanoutMessage.TabIndex = 13;
+            this.btn_SendFanoutMessage.Text = "发送消息";
+            this.btn_SendFanoutMessage.UseVisualStyleBackColor = true;
+            this.btn_SendFanoutMessage.Click += new System.EventHandler(this.btn_SendFanoutMessage_Click);
             // 
             // panel3
             // 
@@ -307,7 +499,7 @@
             this.txt_DirectMessageString.Name = "txt_DirectMessageString";
             this.txt_DirectMessageString.Size = new System.Drawing.Size(241, 21);
             this.txt_DirectMessageString.TabIndex = 8;
-            this.txt_DirectMessageString.Text = "Just Test String";
+            this.txt_DirectMessageString.Text = "Direct路由队列消息";
             // 
             // btn_SendDirectMessage
             // 
@@ -334,6 +526,10 @@
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -368,6 +564,24 @@
         private System.Windows.Forms.TextBox txt_DirectRouting;
         private System.Windows.Forms.TextBox txt_DirectMessageString;
         private System.Windows.Forms.Button btn_SendDirectMessage;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txt_TopicQueue;
+        private System.Windows.Forms.TextBox txt_TopicExchange;
+        private System.Windows.Forms.TextBox txt_TopicRouting;
+        private System.Windows.Forms.TextBox txt_TopicMessageString;
+        private System.Windows.Forms.Button btn_SendTopicMessage;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txt_FanoutQueue;
+        private System.Windows.Forms.TextBox txt_FanoutExchange;
+        private System.Windows.Forms.TextBox txt_FanoutRouting;
+        private System.Windows.Forms.TextBox txt_FanoutMessageString;
+        private System.Windows.Forms.Button btn_SendFanoutMessage;
     }
 }
 

@@ -122,25 +122,8 @@ namespace RabbitMQClient
 
                     ShowMessage("接收到Direct=>" + txt_DirectQueueName.Text.Trim() + "消息：" + message, LogType.info);
 
-                    //MC_channel.BasicAck(ea.DeliveryTag, false);
+                    MC_channel.BasicAck(ea.DeliveryTag, false);
                 };
-
-                //var consumer = new EventingBasicConsumer(MC_channel);
-                //MC_channel.BasicConsume(txt_DirectQueueName.Text.Trim(), false, consumer);
-
-                //while (true)
-                //{
-                //    var ea = (BasicDeliverEventArgs)consumer.Queue.Dequeue();
-
-                //    var body = ea.Body;
-                //    var message = Encoding.UTF8.GetString(body);
-
-                //    int dots = message.Split('.').Length - 1;
-
-
-
-                //    channel.BasicAck(ea.DeliveryTag, false);
-                //}
             }
             catch (Exception ex)
             {
@@ -152,7 +135,11 @@ namespace RabbitMQClient
         {
             try
             {
+                MC_channel.ExchangeDeclare(txt_FanoutExchange.Text.Trim(), ExchangeType.Fanout);
                 MC_channel.QueueDeclare(txt_FanoutQueueName.Text.Trim(), true, false, false, null);
+
+                MC_channel.QueueBind(txt_FanoutQueueName.Text.Trim(), txt_FanoutExchange.Text.Trim(), "user.notice.test");
+
 
                 var consumer = new EventingBasicConsumer(MC_channel);
                 MC_channel.BasicConsume(txt_FanoutQueueName.Text.Trim(), false, consumer);
@@ -160,7 +147,8 @@ namespace RabbitMQClient
                 {
                     var body = ea.Body;
                     var message = Encoding.UTF8.GetString(body);
-                    ShowLog("接收到Fanout=>" + txt_FanoutQueueName.Text.Trim() + "消息：" + message, LogType.info);
+
+                    ShowMessage("接收到Fanout=>" + txt_FanoutQueueName.Text.Trim() + "消息：" + message, LogType.info);
                 };
             }
             catch (Exception ex)
@@ -181,7 +169,8 @@ namespace RabbitMQClient
                 {
                     var body = ea.Body;
                     var message = Encoding.UTF8.GetString(body);
-                    ShowLog("接收到Topic=>" + txt_TopicQueueName.Text.Trim() + "消息：" + message, LogType.info);
+
+                    ShowMessage("接收到Topic=>" + txt_FanoutQueueName.Text.Trim() + "消息：" + message, LogType.info);
                 };
             }
             catch (Exception ex)
